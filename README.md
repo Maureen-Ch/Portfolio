@@ -35,7 +35,7 @@ This repository gathers a collection of practical projects that demonstrate my s
 | Project | Description | Links |
 |--------|-------------|-------|
 | ⚽ **Prediction Game PL** | Predicting Premier League match outcomes using a RandomForestClassifier. Includes data cleaning, feature engineering (rolling averages), model training, and deployment on Hugging Face. | [📂 Repo](https://github.com/Maureen-Ch/Portfolio/tree/main/prediction_game_pl) · [🌐 Live App](https://huggingface.co/spaces/Maureen9/prediction_game_pl) |
-| 🚴‍♀️ **NYC City Bike** ** | Exploratory data analysis of NYC bike usage data: user behavior, geospatial visualizations, clustering, and insights. [📂 Repo](https://github.com/Maureen-Ch/Portfolio/tree/main/NYC-City-Bike)
+| 🚴‍♀️ **NYC City Bike** ** | Exploratory data analysis of NYC bike usage data: user behavior, geospatial visualizations, clustering, and insights. | [📂 Repo](https://github.com/Maureen-Ch/Portfolio/tree/main/NYC-City-Bike)
 | 📊 **Other projects** | Mini-projects focused on cleaning, visualization, and simple ML tasks. | [🔗 View All](https://github.com/Maureen-Ch/Portfolio) |
 
 ---
