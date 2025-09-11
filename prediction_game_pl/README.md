@@ -2,61 +2,75 @@
 ![alt text](https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2586&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 
 
-Football Match Outcome Prediction with RandomForest
-Project Overview
+# ⚽ Football Match Outcome Prediction with RandomForest
 
-This project aims to predict football match outcomes using machine learning, specifically a RandomForest classifier. The dataset contains detailed match statistics for Premier League games from multiple seasons.
+## 🧠 Project Overview
 
-Dataset Description
+This project aims to predict football match outcomes using machine learning, specifically a **RandomForestClassifier**. The dataset contains detailed match statistics for **Premier League** games from multiple seasons.
 
-The dataset (matches.csv) contains 1389 rows and 27 columns, including match date, time, competition, round, day of the week, venue (home/away), result, goals for and against, opponent team, and various match statistics (shots, expected goals, possession, fouls, penalties, etc.).
+---
 
-Sample data snapshot:
+## 📊 Dataset Description
 
-date	time	comp	round	day	venue	result	gf	ga	opponent	...	notes	sh	sot	dist	fk	pk	pkatt	season	team
-2021-08-15	16:30	Premier League	Matchweek 1	Sun	Away	L	0	1	Tottenham	...	NaN	18	4	16.9	1	0	0	2022	Manchester City
-2021-08-21	15:00	Premier League	Matchweek 2	Sat	Home	W	5	0	Norwich City	...	NaN	16	4	17.3	1	0	0	2022	Manchester City
+The dataset (`matches.csv`) contains **1389 rows** and **27 columns**, including:
 
-The dataset contains missing values, especially for Liverpool’s 2021-2022 season matches, which are accounted for during data cleaning.
+- Match details: `date`, `time`, `competition`, `round`, `day`, `venue` (home/away), `result`, `goals for (gf)`, `goals against (ga)`, `opponent`
+- Match statistics: `shots`, `expected goals (xG)`, `possession`, `fouls`, `penalties`, etc.
 
-Data Cleaning & Preprocessing
+### 🔍 Sample data snapshot:
 
-The date column was converted to datetime format for easier handling.
+| date       | time  | comp            | round        | day | venue | result | gf | ga | opponent      | ... | notes | sh | sot | dist | fk | pk | pkatt | season | team            |
+|------------|-------|------------------|---------------|-----|--------|--------|----|----|----------------|-----|-------|----|-----|------|----|----|--------|--------|------------------|
+| 2021-08-15 | 16:30 | Premier League   | Matchweek 1   | Sun | Away   | L      | 0  | 1  | Tottenham      | ... | NaN   | 18 | 4   | 16.9 | 1  | 0  | 0      | 2022   | Manchester City  |
+| 2021-08-21 | 15:00 | Premier League   | Matchweek 2   | Sat | Home   | W      | 5  | 0  | Norwich City   | ... | NaN   | 16 | 4   | 17.3 | 1  | 0  | 0      | 2022   | Manchester City  |
 
-Columns irrelevant to the model (such as comp, notes, and text-based reports) were removed or ignored.
+> ⚠️ The dataset contains **missing values**, especially for **Liverpool’s 2021-2022** season matches, which were handled during data cleaning.
 
-Categorical variables like venue, opponent, and team were encoded into numeric codes for model compatibility.
+---
 
-Missing values were carefully analyzed and handled to ensure data quality.
+## 🧹 Data Cleaning & Preprocessing
 
-Additional features such as match hour (extracted from time), day of the week, and rolling averages over recent matches were engineered to improve predictive power.
+- Converted the `date` column to datetime format.
+- Removed irrelevant columns (`comp`, `notes`, and other textual descriptions).
+- Encoded categorical variables (`venue`, `opponent`, `team`) into numeric codes.
+- Handled missing values through careful analysis and imputation.
+- Engineered new features:
+  - `hour` (from `time`)
+  - `day_code` (from `day of the week`)
+  - Rolling averages over recent 3 matches to capture team form
 
-Feature Engineering
+---
 
-Created new numeric features from existing columns:
+## 🛠️ Feature Engineering
 
-venue_code from venue (home/away)
+Created additional numeric features:
 
-opp_code from opponent
+- `venue_code` — encoded from `venue` (home/away)
+- `opp_code` — encoded from `opponent`
+- `hour` — extracted from match `time`
+- `day_code` — numeric encoding of the day of the week
+- **Rolling averages** for key match stats over the last 3 matches (e.g., shots, goals, xG)
 
-hour from time
+---
 
-day_code from day of the week
+## 🤖 Modeling
 
-Calculated rolling averages for key stats over previous 3 matches to capture recent team form.
+- Data split chronologically:
+  - **Training set**: Matches before 2022
+  - **Test set**: Matches from 2022 onwards
+- Model: `RandomForestClassifier` with:
+  - `n_estimators=50`
+  - `min_samples_split=10`
+- Evaluation:
+  - **Accuracy**
+  - **Confusion matrix** on the test set
 
-Modeling
+---
 
-Data was split chronologically into training (before 2022) and testing (2022 onwards) sets.
+## 🚀 Deployment
 
-A RandomForestClassifier was trained with 50 estimators and minimum 10 samples per split.
+- Trained model saved as `model.pkl` using **Pickle**
+- Integrated into a **web application** deployed on **Hugging Face Spaces**
+- Users can input match data and receive **interactive outcome predictions**
 
-Model performance was evaluated via accuracy and confusion matrix on the test set.
-
-Deployment
-
-The trained model was saved as a pickle file (model.pkl) to facilitate reuse.
-
-This pickle file is used in a web application deployed on Hugging Face Spaces, allowing users to input match data and get outcome predictions interactively.
-
-Check out the live app here: Maureen9/prediction_game_pl
+🔗 **Check out the live app here**: [Maureen9/prediction_game_pl](https://huggingface.co/spaces/Maureen9/prediction_game_pl)
