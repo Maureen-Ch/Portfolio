@@ -2,9 +2,9 @@
 ![alt text](https://images.ctfassets.net/p6ae3zqfb1e3/5b6TOvTnqzRE6hUpe9pcPu/97a29a21836cba7e89db4e632d7f45dd/Citi_Bike_Landing_page_Hero_3x.jpg?w=2500&q=60&fm=webp)
 
 
-# NYC City Bike Trip Analysis
+# NYC Citi Bike Trip Analysis
 
-This project presents an exploratory data analysis of City Bike trips in 
+This project presents an exploratory data analysis of cite bike trips in 
 New York City on October 1st, 2013. Using a dataset of over 40,000 
 records, the goal is to uncover user behavior patterns, analyze trip 
 durations, and visualize the most active start stations.
