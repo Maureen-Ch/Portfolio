@@ -1,3 +1,7 @@
+
+![alt text](https://www.google.com/imgres?q=nyc%20city%20bike&imgurl=https%3A%2F%2Fimages.ctfassets.net%2Fp6ae3zqfb1e3%2F5b6TOvTnqzRE6hUpe9pcPu%2F97a29a21836cba7e89db4e632d7f45dd%2FCiti_Bike_Landing_page_Hero_3x.jpg&imgrefurl=https%3A%2F%2Fcitibikenyc.com%2F&docid=4EKvsDraQ6Q3jM&tbnid=U0VtPWXxMYlrAM&vet=12ahUKEwjdrqfcrtCPAxUQMfsDHe9UN00QM3oECBcQAA..i&w=2137&h=1194&hcb=2&ved=2ahUKEwjdrqfcrtCPAxUQMfsDHe9UN00QM3oECBcQAA)
+
+
 # NYC City Bike Trip Analysis
 
 This project presents an exploratory data analysis of City Bike trips in 
