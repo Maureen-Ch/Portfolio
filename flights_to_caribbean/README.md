@@ -49,12 +49,14 @@ An interactive Tableau dashboard showcasing KPIs and detailed visualizations is 
 - The Tableau workbook can be viewed locally or on Tableau Public via the link above.
 
 ## Project Structure
+
+```
 flights_to_caribbean/
-├── data/ # Raw and cleaned datasets
-├── sql/ # SQL scripts for data processing
-├── tableau/ # Tableau dashboard file (.twbx)
-├── images/ # Dashboard screenshot
-└── README.md # This file
+├── data/              # Raw and cleaned datasets
+├── sql/               # SQL scripts for data processing
+├── tableau/           # Tableau dashboard file (.twbx)
+├── images/            # Dashboard screenshot
+└── README.md          # This file
 
 ---
 
