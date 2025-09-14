@@ -58,6 +58,4 @@ flights_to_caribbean/
 ├── images/            # Dashboard screenshot
 └── README.md          # This file
 
----
 
-*Feel free to reach out if you have any questions or feedback!*
