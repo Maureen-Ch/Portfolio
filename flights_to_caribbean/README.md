@@ -16,7 +16,8 @@ carriers, and distances
 
 ## Dashboard Preview  
 ![Dashboard Preview](./images/dashboard_preview.png)  
-[View interactive dashboard on Tableau Public](https://public.tableau.com/authoring/flights_to_caribbean/Summer2024FlightsDashboard#1Public)
+[View interactive dashboard on Tableau 
+Public](https://public.tableau.com/views/flights_to_caribbean/Summer2024FlightsDashboard?:language=fr-FR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ## Tools and Technologies  
 - **Excel:** Initial data exploration and cleaning  
@@ -38,7 +39,7 @@ summer 2024.
 
 ## Dashboard  
 An interactive Tableau dashboard showcasing KPIs and detailed visualizations is available here:  
-👉 https://public.tableau.com/authoring/flights_to_caribbean/Summer2024FlightsDashboard#1Public
+👉 https://public.tableau.com/views/flights_to_caribbean/Summer2024FlightsDashboard?:language=fr-FR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
 📁 The Tableau workbook (`.twbx`) can be found in the `/tableau/` folder.  
 *Note: This project was created using Tableau Public Desktop.*
